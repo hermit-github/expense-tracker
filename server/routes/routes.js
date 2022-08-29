@@ -10,7 +10,7 @@ const {getCategories,
 router.route("/category/:categoryId").delete(removeCategory)
 router.route("/categories").get(getCategories).post(addCategory)
 router.route("/transaction").post(addTransaction)
-router.route("/transaction/:transactionId").delete(deleteTransactions)
+router.route("/transaction").delete(deleteTransactions)
 router.route("/transactions").get(getTransactions)
 router.route("/labels").get(getLabels)
 

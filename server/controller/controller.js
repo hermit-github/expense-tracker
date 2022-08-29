@@ -84,7 +84,7 @@ exports.getTransactions = BigPromise( async (req,res,next) => {
 })
 
 exports.deleteTransactions = BigPromise( async (req,res,next) => {
-    const transaction = await Transaction.findById(req.params.transactionId);
+    const transaction = await Transaction.findById(req.query.transactionId);
 
     if(!transaction) {
         return next(new CustomError("Transaction not found!",401));
